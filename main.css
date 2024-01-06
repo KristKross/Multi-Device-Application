@@ -1,0 +1,469 @@
+/* universal css  */
+* {
+    margin: 0;
+}
+
+body { /* using image as a background and changing its position for it to be parallax */
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("assets/background.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+/* modal transition effects */
+@keyframes modalEffect {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* contains the trailer CSS */
+.trailer-container {
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    top: 0;
+    animation: modalEffect 0.5s ease forwards;
+    z-index: 2;
+}   
+
+/* works with JavaScript to display when clicking a button */
+.trailer-container.show {
+    display: flex;
+}
+
+.trailer-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    border: #fff solid 2px;
+    position: relative;
+    width: 80%;
+}
+
+.trailer-screen button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 2px;
+}
+
+.trailer-screen button:hover {
+    background-color: #d3d3d3;
+}
+
+.trailer-screen video {
+    width: 90%;
+    padding: 30px 0;
+}
+
+.buy-container {
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    animation: modalEffect 0.5s ease forwards;
+    z-index: 2;
+}   
+
+.buy-container.show {
+    display: flex;
+}
+
+.buy-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    border: #fff solid 2px;
+    position: relative;
+    width: 55vw;
+    height: 60vh;
+}
+
+.console-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.console-container img {
+    width: 60px;
+    padding: 20px;
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.console-container img:hover {
+    background-color: #d3d3d3;
+}
+
+.buy-screen button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 2px;
+}
+
+/* displays when a modal pop-up is clicked on */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* semantics for the navigation bar */
+nav {
+    background-color: rgba(255, 255, 255, 0.9);
+    position: sticky; /* fixed to the top of the screen */
+    top: 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+}
+
+.main-logo {
+    width: 175px;
+    padding: 7px 0;
+    margin-left: 10px;
+}
+
+/* uses flex to display the items side-by-side */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li {
+    margin-left: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+nav a {
+    color: #fff;
+    padding: 10px;
+}
+
+nav li img {
+    width: 45px;
+}
+
+.buy-button {
+    margin-right: 20px;
+    padding: 15px 50px;
+    background-color: #000;
+    color: #fff;
+}
+
+.buy-button:hover {
+    background-color: #272727;
+}
+
+/* hides the menu and sub-menu */
+.menu, .sub-menu {
+    display: none;
+}
+
+/* shows the title screen in its entirety using height 100vh */
+.title {
+    height: calc(100vh - 50px); /* 50px is the height of the navigation bar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title img {
+    width: 50%
+}
+
+/* uses flex to display the buttons */
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.button-container button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    padding: 14px 0;
+    margin: 10px;
+    background-color: #fff;
+    border: 0;
+}
+
+.button-container button:hover {
+    background-color: #d3d3d3;
+}
+
+main {
+    background-color: #000;
+}
+
+.about-container {
+    padding: 40px;
+    display: flex;
+    line-height: 1.2;
+}
+
+.image-container {
+    width: 60%;
+    margin-top: 40px;
+}
+
+.image-container img {
+    width: 100%;
+    margin-top: 40px;
+}
+
+.text-container {
+    margin: 0 20px;
+    width: 50%;
+    display: flex;
+    justify-content : center;
+    flex-direction: column;
+}
+
+/* showcases the content of the website */
+.features-container {
+    margin: 60px 20px 100px 20px;
+    display: flex;
+    justify-content : center;
+}
+
+.features-container img {
+    width: 100%;
+}
+
+.items-container {
+    width: 50%;
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* footer content */
+footer {
+    background-color: #fff;
+    color: #000;
+}
+
+/* showcases the maturity rating */
+.ratings-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.ratings-container img {
+    width: 60px;
+}
+
+.esrb-container {
+    font-size: 14px;
+    margin: 0 5px;
+}
+
+.copyright-container {
+    padding: 10px;
+    text-align: center;
+}
+
+/* adds CSS when the screen width is less than 768px */
+@media screen and (max-width: 768px) {
+    /* hides the items in the navigation bar */
+    li {
+        display: none;
+    }
+    
+    /* adds the dropdown menu */
+    .menu {
+        display: block;
+        padding: 25px 40px;
+        background-color: #000;
+        color: #fff;
+    }
+
+    /* the items in the dropdown menu */
+    .sub-menu {
+        display: none;
+        position: absolute;
+        list-style: none;
+        top: 100%;
+        transform: translateX(-34%);
+        padding: 0;
+        margin: 0;
+    }
+
+    /* styling the items in the dropdown menu */
+    .sub-menu a, .sub-menu button  {
+        display: flex;
+        background-color: #fff;
+        color: #000;
+        font-size: 12px;
+        justify-content: center;
+        align-items: center;
+        padding: 14px 40px;
+    }
+
+    .sub-menu a:hover, .sub-menu button:hover {
+        background-color: #d3d3d3;
+    }
+
+    .menu:hover .sub-menu {
+        display: block;
+    }
+
+    .image-container {
+        display: none;
+    }
+
+    .about-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .text-container {
+        width: 100%;
+    }
+}
+
+/* adds CSS when the screen width is less than 412px */
+@media screen and (max-width: 412px) {
+    .trailer-screen button, .buy-screen:hover {
+        padding: 4px 8px;
+    }
+
+    .main-logo {
+        width: 100px;
+    }
+
+    .menu {
+        padding: 14px 20px;
+    }
+
+    .sub-menu {
+        transform: translateX(-26%);
+    }
+
+    .sub-menu a, .sub-menu button  {
+        padding: 12px 20px;
+    }
+
+    
+    .button-container button {
+        font-size: 12px;
+    }
+
+    .text-container p, .items-container p  {
+        font-size: 12px;
+    }
+
+    .text-container h1 {
+        font-size: 16px;
+    }
+
+    .features-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 20px;
+    }
+
+    .items-container {
+        margin-bottom: 30px;
+    }
+
+    .items-container h2 {
+        font-size: 14px;
+    }
+}
+
+/* adds CSS when the screen width is less than 376px */
+@media screen and (max-width: 376px) {
+    .title {
+        height: 100vh;
+    }
+
+    .button-container {
+        flex-direction: column;
+    }
+
+    .button-container button {
+        font-size: 8px;
+        width: 120px;
+    }
+
+    .text-container p, .items-container p {
+        font-size: 10px;
+    }
+
+    .text-container h1, .items-container h2 {
+        font-size: 12px;
+    }
+
+    .ratings-container img {
+        width: 40px;
+    }
+
+    .esrb-container {
+        font-size: 8px;
+        margin: 0 5px;
+    }
+
+    .copyright-container {
+        font-size: 8px;
+    }
+}

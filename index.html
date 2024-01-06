@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>World of Horror</title>
+</head>
+<body>
+
+    <!-- modal pop-ups -->
+    <div class="trailer-container">
+        <div class="trailer-screen">  
+            <video id="trailer-video" src="assets\trailer.mp4" controls></video>
+            <button id="close-trailer">X</button>
+        </div>
+    </div>
+
+    <div class="buy-container">
+        <div class="buy-screen">
+            <div class="console-container">
+                <a href="https://store.steampowered.com/app/913740/WORLD_OF_HORROR/"><img src="assets\steam-logo.png"></a>
+                <a href="https://store.playstation.com/en-us/product/UP2251-CUSA37155_00-1630512188477703"><img src="assets\ps-logo.png"></a>
+                <a href="https://www.nintendo.com/us/store/products/world-of-horror-switch/"><img src="assets\switch-logo.png"></a>
+            </div>
+            <button id="close-buy">X</button>
+        </div>
+    </div>
+
+    <!-- overlays transparent background -->
+    <div class="overlay"></div>
+
+    <!-- header and nav bar -->
+    <nav>
+        <div class="nav-container">
+            <img class="main-logo" src="assets\nav-logo.png">
+            <ul>
+                <li><a href="https://twitter.com/panstasz"><img src="assets\twitter.png"></a></li>
+                <li><a href="https://discord.com/invite/bEPAtBY"><img src="assets\discord.png"></a></li>
+                <li><button class="buy-button" id="open-buy-1">Buy Now</button></li>
+                <li class="menu">Menu   
+                    <ul class="sub-menu">
+                        <a href="https://twitter.com/panstasz">Twitter</a>
+                        <a href="https://discord.com/invite/bEPAtBY">Discord</a>
+                        <button id="open-buy-2">Buy Now</button>
+                    </ul>   
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- title screen with parallax background-->
+    <div class="title">
+        <img src="assets\title-logo.png">
+        <div class="button-container">
+            <button id="open-buy-3">Buy Now</button>
+            <button><a href="https://panstasz.itch.io/world-of-horror">Demo</a></button>
+            <button id="open-trailer">Trailer</button>
+        </div>
+    </div>
+    
+    <!-- website contents -->
+    <main>  
+        <div class="about-container">
+            <div class="image-container">
+                <img src="assets\01.png"><img>
+            </div>
+            <div class="text-container">
+                <p>ABOUT THE GAME</p>
+                &nbsp;
+                <h1>Behold the dreadful tale of World of Horror.</h1>
+                &nbsp;
+                <p> World of Horror is a Lovecraftian-horror role-playing
+                    game where players must navigate a hellish
+                    roguelite reality with turn-based combat and unforgiving choices.
+                </p>
+            </div>
+        </div>
+
+        <div class="features-container">
+            <div class="items-container">
+                <img src="assets\02.png">
+                &nbsp;
+                <h2>Investigate Strange Mysteries</h2>
+                &nbsp;
+                <p>
+                    In hospitals, abandoned classrooms, quiet apartments, and dark forests,
+                    strange appearances and unexplainable phenomena test the sanity of 
+                    residents in Shiokawa, Japan.
+                </p>  
+            </div>
+            <div class="items-container">
+                <img src="assets\03.png">  
+                &nbsp;
+                <h2>Face Wicked Horrors</h2>
+                &nbsp;
+                <p>
+                    Fight through unbodied horrors that plagues the city, find their strengths
+                    and weaknesses and give yourself the advantage to have a fighting chance
+                    to save the world before the Old Gods are reawakened.
+               </p>
+            </div>
+        </div>
+
+        <div class="features-container">
+            <div class="items-container">
+                <img src="assets\04.png">
+                &nbsp;
+                <h2>Choose Between unforgiving Choices</h2>
+                &nbsp;
+                <p> 
+                    Face difficult dillemas that takes a toll on your physical and mental health.
+                    Each dilemma has a different chance of success and failure. But in the World
+                    of Horror, there's no such thing as a best choice. 
+                </p>  
+            </div>
+            <div class="items-container">
+                <img src="assets\05.png">  
+                &nbsp;
+                <h2>Prepare And Plan</h2>
+                &nbsp;
+                <p>
+                    Use your funds to purchase useful items, deadly weapons or allies to aid in 
+                    your Investigations. Plan and prepare accordingly to save the world from the Old
+                    Gods before time runs out.
+               </p>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <footer>
+            <div class="ratings-container">
+                <img src="assets\esrb-rating.png" class="mature-rating">
+                <div class="esrb-container">
+                    <p>Blood and Gore</p>
+                    <p>Language</p>
+                    <p>Suggestive Themes</p>
+                    <p>Violence</p>
+                </div>
+                <img src="assets\pegi-rating.png" class="pegi-rating">
+                <img src="assets\pegi-horror.png" class="pegi-rating">
+            </div>
+            <div class="copyright-container">
+                <p>© 2023-2024 Copyright</p>
+            </div>     
+        </footer>  
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
